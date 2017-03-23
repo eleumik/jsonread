@@ -1,6 +1,6 @@
 # jsonread
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![Javadoc](http://javadoc-badge.appspot.com/org.eleusoft/jsonread_1.0.0.svg?label=Javadoc)](https://eleumik.github.io/jsonread/apidocs/)
+[![Javadoc](http://javadoc-badge.appspot.com/org.eleusoft/jsonread_1.0.0.svg?label=Javadoc)](https://eleusoft.github.io/jsonread/apidocs/)
 
 A minimal, <b>source-centric API to build an object model from a serialized JSON Object</b>, with implementations for most (Java) JSON parsers.
 
