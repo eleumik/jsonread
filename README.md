@@ -1,4 +1,6 @@
 # jsonread
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 A minimal, source-centric API for reading a JSON document, with implementations for most Java parsers.
 
 ###*License*
