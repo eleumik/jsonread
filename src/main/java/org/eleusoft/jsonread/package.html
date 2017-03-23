@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+</HEAD>
+<BODY bgColor=white>
+<p><em>JsonRead</em> is a simple API to parse a JSON character stream building an object model.
+
+<p>The <em>JsonRead</em> API is very similar to a small, read-only subset of the 
+<A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API.
+
+<p>The <em>JsonRead</em> API is meant for a client that must parse a JSON document
+and be able to access the JSON Values it contains.
+
+<p>The <em>JsonRead</em> API is not meant as a way to easily access from the Java Language 
+values serialized in a JSON document (Eg: no specialized accessors like getBoolean()) but
+more as a way to explore the JSON document structure.
+
+<p>A purpose of the <em>JsonRead</em> API is to represent a JSON Document with an Object Model
+that can represent  the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>, 
+see also http://www.json.org/
+
+<p>Ideally the Object Model should be able to represent what was in the source JSON, 
+this aspect is mainly relevant with JSON Numbers: ideally a JSON Number will
+maintain also the representation present in the source and not only the {@link java.lang.Number} binding.
+
+<p>Ideally an implementation of this API should not degrade a wrong value to a JSON String
+but throw a parsing exception,
+examples of wrong values are: <Code>NaN</Code>, <code>.0</code>, <code>+0</code>, <code>034</code>, <code>Infinity</code>.
+
+<p>An other purpose of the <em>JsonRead</em> API is to be able to compare results and performance
+of different JSON Parser implementations using a common API, there are implementations of this package
+for the following JSON Parsers:
+
+<ul>
+	<li><p><A target='_blank' href='https://github.com/doubledutch/LazyJSON'>doubledutch LazyJSON</A>
+	<li><p><A target='_blank' href='https://github.com/FasterXML/jackson'>Jackson</A>
+	<li><p>Any parser that implements the <A href='https://docs.oracle.com/javaee/7/api/javax/json/package-summary.html'>javax.json</A> 
+	API of <a target='_blank' href='https://jsonp.java.net/'>JSR 353</a>
+	<li><p><A target='_blank' href='https://github.com/stleary/JSON-java'>JSON in Java [package org.json]</A>
+	<li><p><A target='_blank' href='http://json-lib.sourceforge.net/'>Json-lib (net.sf.json)</A>
+	<li><p><A target='_blank' href='https://github.com/google/gson'>Gson</A>
+	<li><p><A target='_blank' href='https://sourceforge.net/projects/argo/'>Argo</A>
+	<li><p><A target='_blank' href='https://bitbucket.org/jmarsden/jsonij/wiki/Home'>Jsonij</A>
+	<li><p><A target='_blank' href='http://bolerio.github.io/mjson/'>Mjson</A>
+	<li><p><A target='_blank' href='https://sourceforge.net/projects/fastjson/'>Fastjson</A>
+	<li><p><A target='_blank' href='https://github.com/billdavidson/JSONUtil'>JSONUtil</a>
+	<li><p><A target='_blank' href='http://code.grobmeier.de/jjson/'>JJSON</a>
+	<li><p><A target='_blank' href='http://cookjson.yuanheng.org/'>Cookjson</a>
+	<li><p><A target='_blank' href='http://owlike.github.io/genson/'>Genson</a>
+	<li><p><A target='_blank' href='https://github.com/netplex/json-smart-v2'>Json-Smart V.2</a>
+	<li><p><A target='_blank' href='http://johnzon.apache.org/'>Apache Johnzon</a>
+	<li><p><A target='_blank' href='https://github.com/ralfstx/minimal-json'>Minimal-json</a>
+	
+	
+</ul>
+
+ 
+<p>The functionalities/requirements of the JsonRead API are:
+<ol>
+	<li><p>{@link org.eleusoft.jsonread.service.JsonReadProviderLoader} is used
+	to obtain the default  {@link org.eleusoft.jsonread.JsonReadProvider}
+	registered. Which library is loaded depends on the jsonread and json-parsers 
+	implementations present in the 
+	class-path, a client application can always define its own 
+	<code>META-INF/services/org.eleusoft.jsonread.JsonReadProvider</code>
+	file containing the name of the implementation to use.
+	<li><p>{@link org.eleusoft.jsonread.JsonReadProvider} creates 
+	a {@link org.eleusoft.jsonread.JsonObject} from a character stream
+	throwing {@link org.eleusoft.jsonread.JsonParsingException}
+	if source has syntax errors and {@link org.eleusoft.jsonread.JsonException}
+	for any other problem like an IOException.
+	<li><p>A {@link org.eleusoft.jsonread.JsonObject} offers access by key to values of the
+	(unordered) mappings it contains in the form of {@link org.eleusoft.jsonread.JsonValue},
+	it exposes also the set of keys.
+	<li><p>A {@link org.eleusoft.jsonread.JsonValue} can be a:
+	<ol>
+	<li>{@link org.eleusoft.jsonread.JsonObject}
+	<li>{@link org.eleusoft.jsonread.JsonArray}
+	<li>{@link org.eleusoft.jsonread.JsonNumber}
+	<li>{@link org.eleusoft.jsonread.JsonString}
+	<li>{@link org.eleusoft.jsonread.JsonBoolean}
+	<li>{@link org.eleusoft.jsonread.JsonNull}
+	</ol> 
+	<p>implementation instances can be discriminated using
+	<code>instanceof</code> operator or using {@link org.eleusoft.jsonread.JsonValue#getType()},
+	they are not required to implement <code>equals(Object)</code> or <code>hashCode()</code>.
+	<li><p>A {@link org.eleusoft.jsonread.JsonObject} exposes the (unordered) keys of the mappings
+	it contains.
+	
+	<li><p>A {@link org.eleusoft.jsonread.JsonNumber} offers access to the JSON Number
+	it represents as a {@link java.lang.String} and as a {@link java.lang.Number}, ideally
+	the String representation should be the source value.
+	<li><p>A {@link org.eleusoft.jsonread.JsonArray} exposes its size and offers access 
+	to the {@link JsonValue} instances it contains by position.
+	<li><p>A {@link org.eleusoft.jsonread.JsonString} simply contains its textual value.
+	
+	<li><p>Singleton instances of <code>true</code>, <code>false</code> and <code>null</code>
+	can be retrieved from {@link org.eleusoft.jsonread.JsonBoolean}
+	and {@link org.eleusoft.jsonread.JsonNull}.
+	<li><p>There are no requirements on the runtime exceptions thrown by the methods of 
+	{@link org.eleusoft.jsonread.JsonObject}  and {@link org.eleusoft.jsonread.JsonArray}
+	(typically an not existing name or an index out of bounds),
+	they might throw  {@link org.eleusoft.jsonread.JsonException} or an implementation
+	specific runtime exception like {@link java.lang.ArrayIndexOutOfBoundsException}
+	<li><p>An implementation of {@link org.eleusoft.jsonread.JsonReadProvider} must fail
+	fast (in static initializer) when the libraries it depends on are not available.
+</ol>
+</BODY></HTML>
