@@ -63,7 +63,7 @@ but:
 </ul>
 
 <!-- table totals -->
-<TABLE border cellspacing=0><TR><TD colspan=99><TR><th></th><th>Elapsed</th><th>% of Tot</th><th>% of Min</th><th>% of Max</th><th></th></TR><TR><TD>JsonReadProviderJackson</TD><TD align=right>4441</TD><TD align=right>5,53%</TD><TD align=right>100,00%</TD><TD align=right>36,68%</TD><td><DIV TITLE='JsonReadProviderJackson 
+<TABLE border cellspacing=0><TR><TD colspan=99><TR><th></th><th>Elapsed</th><th>% of Tot</th><th>% of Min</th><th>% of Max</th><th width=300></th></TR><TR><TD>JsonReadProviderJackson</TD><TD align=right>4441</TD><TD align=right>5,53%</TD><TD align=right>100,00%</TD><TD align=right>36,68%</TD><td><DIV TITLE='JsonReadProviderJackson 
 duration:4441') STYLE='overflow:hidden;height:15px;width:110px;background-color:#12c'></DIV></td></TR><TR><TD>JsonReadProviderLazyjson</TD><TD align=right>4947</TD><TD align=right>6,16%</TD><TD align=right>111,39%</TD><TD align=right>40,85%</TD><td><DIV TITLE='JsonReadProviderLazyjson 
 duration:4947') STYLE='overflow:hidden;height:15px;width:123px;background-color:#190'></DIV></td></TR><TR><TD>JsonReadProviderMinimaljson</TD><TD align=right>5080</TD><TD align=right>6,32%</TD><TD align=right>114,39%</TD><TD align=right>41,95%</TD><td><DIV TITLE='JsonReadProviderMinimaljson 
 duration:5080') STYLE='overflow:hidden;height:15px;width:126px;background-color:#1f4'></DIV></td></TR><TR><TD>JsonReadProviderGlassfish</TD><TD align=right>6762</TD><TD align=right>8,42%</TD><TD align=right>152,26%</TD><TD align=right>55,84%</TD><td><DIV TITLE='JsonReadProviderGlassfish 
