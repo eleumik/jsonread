@@ -4,7 +4,7 @@
 
 Scaladoc
 
-A minimal, source-centric API for reading a JSON document, with implementations for most Java parsers.
+A minimal, source-centric API for building an object model from a serialized JSON Object, with implementations for most Java parsers.
 
 ###*License*
 
