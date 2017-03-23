@@ -12,9 +12,9 @@ A minimal, source-centric API for building an object model from a serialized JSO
 and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
 
 <p>The <em>JsonRead</em> API is <em>not meant</em> for a high level client that wants to easily bound Java types 
-to values serialized in some JSON  (Eg: no specialized accessors like getBoolean(key), getLong(key)).
+to values serialized in some JSON  (Eg: no specialized accessors like <code>getBoolean(key)</code> or <code>getLong(key)</code>).
 
-<p>The <em>JsonRead</em> API is also a way to test performance and correctness of many different JSON parsers available.
+<p>The <em>JsonRead</em> API is also a way to test performance and correctness of the available JSON parsers.
 
 ### Simple
 
