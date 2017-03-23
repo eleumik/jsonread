@@ -6,6 +6,16 @@ Scaladoc
 
 A minimal, source-centric API for building an object model from a serialized JSON Object, with implementations for most Java parsers.
 
+## Purpose
+
+<p>The <em>JsonRead</em> API is meant for a client that must parse a JSON document
+and be able to access the JSON Values it contains.
+
+<p>The <em>JsonRead</em> API is not meant as a way to easily access from the Java Language 
+values serialized in a JSON document (Eg: no specialized accessors like getBoolean()) but
+more as a way to explore the JSON document structure.
+
+
 ###*License*
 
 Jsonread is released under the [Apache 2.0 license](license.txt).
