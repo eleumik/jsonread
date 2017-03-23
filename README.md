@@ -1,6 +1,6 @@
 # jsonread
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![Javadoc](http://javadoc-badge.appspot.com/com.github.nscala-time/nscala-time_2.11.svg?label=Javadoc)](https://eleumik.github.io/jsonread/apidocs/)
+[![Javadoc](http://javadoc-badge.appspot.com/org.eleusoft/jsonread_1.0.0.svg?label=Javadoc)](https://eleumik.github.io/jsonread/apidocs/)
 
 Scaladoc
 
