@@ -2,26 +2,42 @@
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Javadoc](http://javadoc-badge.appspot.com/org.eleusoft/jsonread_1.0.0.svg?label=Javadoc)](https://eleumik.github.io/jsonread/apidocs/)
 
-Scaladoc
-
-A minimal, source-centric API for building an object model from a serialized JSON Object, with implementations for most Java parsers.
+A minimal, source-centric API for building an object model from a serialized JSON Object, with implementations for most (Java) JSON parsers.
 
 ## Purpose
 
-<p>The <em>JsonRead</em> API is meant for a client that must parse a serialized JSON Object
-and be able to access the JSON Values it contains.
+<p>The main purpose of the <em>JsonRead API</em> is to isolate a common functionality needed by many binding applications in one simple but complete API so that different implementations can be used and/or tested.
 
-<p>The <em>JsonRead</em> API is <b>not meant</b> as a way to easily access from the Java Language 
-values serialized in a JSON document (Eg: no specialized accessors like getBoolean()) but
-more as a way to explore the structure of a JSON document.
+<p>The <em>JsonRead</em> API is meant for a low level client that must parse a serialized JSON Object
+and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
 
-<p>A purpose of the <em>JsonRead</em> API is to represent a JSON Document with an Object Model
-that can represent  the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>, 
+<p>The <em>JsonRead</em> API is <em>not meant</em> for a high level client that wants to easily bound Java types 
+to values serialized in some JSON  (Eg: no specialized accessors like getBoolean(key), getLong(key)).
 
-<p>An other purpose of the <em>JsonRead</em> API is to be able to compare results and performance
-of different JSON Parser implementations using a common API that is very easy to implement, 
-there are implementations of this package
-for the following JSON Parsers:
+<p>The <em>JsonRead</em> API is also a way to test performance and correctness of many different JSON parsers available.
+
+### Simple
+
+<p>The <em>JsonRead API</em> is simple to use and simple to implement.
+
+### Complete
+
+<p>The <em>JsonRead API</em>
+represent a JSON Document with an Object Model
+that fully supports the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>,
+in this is similar to the 
+<A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API
+but:
+	<ol>
+	<li><em>JsonRead</em> supports only parsing and only to an object model (no streaming).
+	<li><em>JsonRead</em> prescribes to the implementation to maintain the lexical value of a JSON Number as found in the source 
+	</ol>
+	
+
+
+## Implementations
+
+<p>There are implementations of the <em>JsonRead API</em> for the following (Java) JSON Parsers:
 
 <ul>
 	<li><p><A target='_blank' href='https://github.com/doubledutch/LazyJSON'>doubledutch LazyJSON</A>
