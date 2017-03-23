@@ -63,17 +63,18 @@ but:
 </ul>
 
 <!-- table totals -->
-<TABLE border cellspacing=0><TR><TD colspan=99><TR><th></th><th>Elapsed</th><th>% of Tot</th><th>% of Min</th><th>% of Max</th><th width=300></th></TR><TR><TD>JsonReadProviderJackson</TD><TD align=right>4441</TD><TD align=right>5,53%</TD><TD align=right>100,00%</TD><TD align=right>36,68%</TD><td><DIV TITLE='JsonReadProviderJackson 
-duration:4441') STYLE='overflow:hidden;height:15px;width:110px;background-color:#12c'></DIV></td></TR><TR><TD>JsonReadProviderLazyjson</TD><TD align=right>4947</TD><TD align=right>6,16%</TD><TD align=right>111,39%</TD><TD align=right>40,85%</TD><td><DIV TITLE='JsonReadProviderLazyjson 
-duration:4947') STYLE='overflow:hidden;height:15px;width:123px;background-color:#190'></DIV></td></TR><TR><TD>JsonReadProviderMinimaljson</TD><TD align=right>5080</TD><TD align=right>6,32%</TD><TD align=right>114,39%</TD><TD align=right>41,95%</TD><td><DIV TITLE='JsonReadProviderMinimaljson 
-duration:5080') STYLE='overflow:hidden;height:15px;width:126px;background-color:#1f4'></DIV></td></TR><TR><TD>JsonReadProviderGlassfish</TD><TD align=right>6762</TD><TD align=right>8,42%</TD><TD align=right>152,26%</TD><TD align=right>55,84%</TD><td><DIV TITLE='JsonReadProviderGlassfish 
-duration:6762') STYLE='overflow:hidden;height:15px;width:168px;background-color:#258'></DIV></td></TR><TR><TD>JsonReadProviderJohnzon</TD><TD align=right>8141</TD><TD align=right>10,13%</TD><TD align=right>183,31%</TD><TD align=right>67,23%</TD><td><DIV TITLE='JsonReadProviderJohnzon 
-duration:8141') STYLE='overflow:hidden;height:15px;width:202px;background-color:#2bc'></DIV></td></TR><TR><TD>JsonReadProviderFastjson</TD><TD align=right>8722</TD><TD align=right>10,86%</TD><TD align=right>196,40%</TD><TD align=right>72,03%</TD><td><DIV TITLE='JsonReadProviderFastjson 
-duration:8722') STYLE='overflow:hidden;height:15px;width:217px;background-color:#320'></DIV></td></TR><TR><TD>JsonReadProviderCookjson</TD><TD align=right>9897</TD><TD align=right>12,32%</TD><TD align=right>222,86%</TD><TD align=right>81,73%</TD><td><DIV TITLE='JsonReadProviderCookjson 
-duration:9897') STYLE='overflow:hidden;height:15px;width:246px;background-color:#384'></DIV></td></TR><TR><TD>JsonReadProviderGson</TD><TD align=right>9515</TD><TD align=right>11,85%</TD><TD align=right>214,25%</TD><TD align=right>78,58%</TD><td><DIV TITLE='JsonReadProviderGson 
-duration:9515') STYLE='overflow:hidden;height:15px;width:236px;background-color:#3e8'></DIV></td></TR><TR><TD>JsonReadProviderNanojson</TD><TD align=right>10714</TD><TD align=right>13,34%</TD><TD align=right>241,25%</TD><TD align=right>88,48%</TD><td><DIV TITLE='JsonReadProviderNanojson 
-duration:10714') STYLE='overflow:hidden;height:15px;width:266px;background-color:#44c'></DIV></td></TR><TR><TD>JsonReadProviderMjson</TD><TD align=right>12109</TD><TD align=right>15,07%</TD><TD align=right>272,66%</TD><TD align=right>100,00%</TD><td><DIV TITLE='JsonReadProviderMjson 
-duration:12109') STYLE='overflow:hidden;height:15px;width:301px;background-color:#4b0'></DIV></td></TR><TR><td></td><td align=right><b>80328</b></td><td></td></tr></TABLE>
+<TABLE border cellspacing=0><TR><TD colspan=99><TR><th></th><th>Elapsed</th><th>% of Tot</th><th>% of Min</th><th>% of Max</th><th width=300></th></TR>
+<TR><TD>JsonReadProviderJackson</TD><TD align=right>4441</TD><TD align=right>5,53%</TD><TD align=right>100,00%</TD><TD align=right>36,68%</TD><td></td></TR>
+<TR><TD>JsonReadProviderLazyjson</TD><TD align=right>4947</TD><TD align=right>6,16%</TD><TD align=right>111,39%</TD><TD align=right>40,85%</TD><td></td></TR>
+<TR><TD>JsonReadProviderMinimaljson</TD><TD align=right>5080</TD><TD align=right>6,32%</TD><TD align=right>114,39%</TD><TD align=right>41,95%</TD><td></td></TR>
+<TR><TD>JsonReadProviderGlassfish</TD><TD align=right>6762</TD><TD align=right>8,42%</TD><TD align=right>152,26%</TD><TD align=right>55,84%</TD><td></td></TR>
+<TR><TD>JsonReadProviderJohnzon</TD><TD align=right>8141</TD><TD align=right>10,13%</TD><TD align=right>183,31%</TD><TD align=right>67,23%</TD><td></td></TR>
+<TR><TD>JsonReadProviderFastjson</TD><TD align=right>8722</TD><TD align=right>10,86%</TD><TD align=right>196,40%</TD><TD align=right>72,03%</TD><td></td></TR>
+<TR><TD>JsonReadProviderCookjson</TD><TD align=right>9897</TD><TD align=right>12,32%</TD><TD align=right>222,86%</TD><TD align=right>81,73%</TD><td></td></TR>
+<TR><TD>JsonReadProviderGson</TD><TD align=right>9515</TD><TD align=right>11,85%</TD><TD align=right>214,25%</TD><TD align=right>78,58%</TD><td></td></TR>
+<TR><TD>JsonReadProviderNanojson</TD><TD align=right>10714</TD><TD align=right>13,34%</TD><TD align=right>241,25%</TD><TD align=right>88,48%</TD><td></td></TR>
+<TR><TD>JsonReadProviderMjson</TD><TD align=right>12109</TD><TD align=right>15,07%</TD><TD align=right>272,66%</TD><TD align=right>100,00%</TD><td></td></TR>
+</TABLE>
 
 ## *License*
 
