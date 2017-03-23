@@ -6,7 +6,7 @@ A minimal, source-centric API for building an object model from a serialized JSO
 
 ## Purpose
 
-<p>The main purpose of the <em>JsonRead API</em> is to isolate a common functionality needed by many binding applications in one <A href='#simple'>simple</a> but [complete](#complete) API so that different [implementations](#implementations) can be used and/or tested.
+<p>The main purpose of the <em>JsonRead API</em> is to isolate a common functionality needed by many binding applications in one <A href='#simple'>simple</a> but <A href='#complete'>complete</a> API that has many different <A href='#implementations'>implementations</a>.
 
 <p>The <em>JsonRead</em> API is meant for a low level client that must parse a serialized JSON Object
 and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
@@ -18,12 +18,12 @@ to values serialized in some JSON  (Eg: no specialized accessors like getBoolean
 
 ### Simple
 
-<p>The <em>JsonRead API</em> is simple to use and simple to implement.
+<p>The <em>JsonRead API</em> is tiny and simple to use and also simple to implement: it takes an hour to wrap an implementation.
 
 ### Complete
 
 <p>The <em>JsonRead API</em>
-represent a JSON Document with an Object Model
+represent a JSON Document with an object model
 that fully supports the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>,
 in this is similar to the 
 <A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API
