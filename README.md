@@ -62,7 +62,7 @@ but:
 	
 </ul>
 
-###*License*
+## *License*
 
 Jsonread is released under the [Apache 2.0 license](license.txt).
 
