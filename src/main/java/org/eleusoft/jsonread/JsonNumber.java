@@ -58,6 +58,8 @@ public abstract class JsonNumber extends JsonValue
 	 * <p>See also <a href='https://github.com/json-schema/json-schema/issues/27'>https://github.com/json-schema/json-schema/issues/27</a>,
 	 * and <em>integer lexical</em> <a href='https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015'>https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015</a>
 	 * 
+	 * <p>About <code>-0.0</code>: <a href='https://www.ietf.org/mail-archive/web/json/current/msg03668.html'>[Json] on serialization of signed zero</a> on ietf.org
+	 * 
 	 * @return true if this {@link JsonNumber} is integral
 	 */
 	public abstract boolean isIntegral();

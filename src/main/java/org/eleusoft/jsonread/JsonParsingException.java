@@ -2,7 +2,7 @@ package org.eleusoft.jsonread;
 
 
 /**
- * Exception used by {@link JsonReadProvider}
+ * Runtime exception used by {@link JsonReadProvider}
  * to signal a syntax error in a JSON character stream.
  * @author michele
  *

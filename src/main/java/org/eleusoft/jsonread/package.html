@@ -5,30 +5,30 @@
 <BODY bgColor=white>
 <p><em>JsonRead</em> is a simple API to parse a JSON character stream building an object model.
 
-<p>The <em>JsonRead</em> API is very similar to a small, read-only subset of the 
-<A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API.
 
-<p>The <em>JsonRead</em> API is meant for a client that must parse a JSON document
-and be able to access the JSON Values it contains.
+<p>The <em>JsonRead</em> API is meant for a low level client that must parse a serialized JSON Object
+and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
 
-<p>The <em>JsonRead</em> API is not meant as a way to easily access from the Java Language 
-values serialized in a JSON document (Eg: no specialized accessors like getBoolean()) but
-more as a way to explore the JSON document structure.
+<p>The <em>JsonRead</em> API is <em>not meant</em> for a high level client that wants to easily bound Java types 
+to values serialized in some JSON  (Eg: no accessors to bound values like <code>getDouble(key)</code> or <code>getString(key)</code>).
 
-<p>A purpose of the <em>JsonRead</em> API is to represent a JSON Document with an Object Model
-that can represent  the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>, 
-see also http://www.json.org/
+<p>The <em>JsonRead</em> API is also a way to test performance and correctness of the available JSON parsers.
+
+
+<p>A requirement of the <em>JsonRead</em> API is to represent a JSON Document with an Object Model
+that can fully support  the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>, 
+in this is similar to the 
+<A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API
+but <em>JsonRead</em> supports only parsing and only to an object model (no streaming).
 
 <p>Ideally the Object Model should be able to represent what was in the source JSON, 
 this aspect is mainly relevant with JSON Numbers: ideally a JSON Number will
-maintain also the representation present in the source and not only the {@link java.lang.Number} binding.
+maintain also the representation present in the source and not only the bound {@link java.lang.Number}.
 
-<p>Ideally an implementation of this API should not degrade a wrong value to a JSON String
-but throw a parsing exception,
-examples of wrong values are: <Code>NaN</Code>, <code>.0</code>, <code>+0</code>, <code>034</code>, <code>Infinity</code>.
 
 <p>An other purpose of the <em>JsonRead</em> API is to be able to compare results and performance
-of different JSON Parser implementations using a common API, there are implementations of this package
+of different JSON Parser implementations using a common API that is very easy to implement, 
+there are implementations of this package
 for the following JSON Parsers:
 
 <ul>
@@ -104,5 +104,10 @@ for the following JSON Parsers:
 	specific runtime exception like {@link java.lang.ArrayIndexOutOfBoundsException}
 	<li><p>An implementation of {@link org.eleusoft.jsonread.JsonReadProvider} must fail
 	fast (in static initializer) when the libraries it depends on are not available.
+	<li><p>Ideally an implementation of this API should not degrade a wrong value to a JSON String
+	but throw a {@link org.eleusoft.jsonread.JsonParsingException},
+	examples of wrong values are: 
+	<Code>NaN</Code>, <code>.0</code>, <code>+0</code>, <code>034</code>, <code>Infinity</code>.
+	
 </ol>
 </BODY></HTML>
