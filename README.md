@@ -6,7 +6,7 @@ A minimal, source-centric API for building an object model from a serialized JSO
 
 ## Purpose
 
-<p>The main purpose of the <em>JsonRead API</em> is to isolate a common functionality needed by many binding applications in one simple but complete API so that different implementations can be used and/or tested.
+<p>The main purpose of the <em>JsonRead API</em> is to isolate a common functionality needed by many binding applications in one [simple](#simple) but [complete](#complete) API so that different [implementations](implementations) can be used and/or tested.
 
 <p>The <em>JsonRead</em> API is meant for a low level client that must parse a serialized JSON Object
 and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
