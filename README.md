@@ -12,7 +12,7 @@ A minimal, source-centric API for building an object model from a serialized JSO
 and access through a complete object model the JSON Values contained in it, an example is a generic binding processor.
 
 <p>The <em>JsonRead</em> API is <em>not meant</em> for a high level client that wants to easily bound Java types 
-to values serialized in some JSON  (Eg: no specialized accessors like <code>getBoolean(key)</code> or <code>getLong(key)</code>).
+to values serialized in some JSON  (Eg: no accessors to bound values like <code>getDouble(key)</code> or <code>getString(key)</code>).
 
 <p>The <em>JsonRead</em> API is also a way to test performance and correctness of the available JSON parsers.
 
@@ -22,14 +22,14 @@ to values serialized in some JSON  (Eg: no specialized accessors like <code>getB
 
 ### Complete
 
-<p>The <em>JsonRead API</em>
-represent a JSON Document with an object model
+<p>The <em>JsonRead API</em> representsa JSON with an object model
 that fully supports the concepts present in the <A href='https://tools.ietf.org/html/rfc7159'>JSON Specification</A>,
 in this is similar to the 
 <A target='_blank' href='https://json-processing-spec.java.net/nonav/releases/1.0/pfd-draft/javadocs/index.html'>javax.json</A> API
 but:
 	<ol>
-	<li><em>JsonRead</em> supports only parsing and only to an object model (no streaming).
+	<li><em>JsonRead</em> supports only parsing and not serialization.
+	<li><em>JsonRead</em> supports only parsing to an object model, has no streaming API.
 	<li><em>JsonRead</em> prescribes to the implementation to maintain the lexical value of a JSON Number as found in the source 
 	</ol>
 	
@@ -45,16 +45,16 @@ but:
 	<li><p>Any parser that implements the <A href='https://docs.oracle.com/javaee/7/api/javax/json/package-summary.html'>javax.json</A> 
 	API of <a target='_blank' href='https://jsonp.java.net/'>JSR 353</a>
 	<li><p><A target='_blank' href='https://github.com/stleary/JSON-java'>JSON in Java [package org.json]</A>
-	<li><p><A target='_blank' href='http://json-lib.sourceforge.net/'>Json-lib (net.sf.json)</A>
+	<li><p><A target='_blank' href='https://json-lib.sourceforge.net/'>Json-lib (net.sf.json)</A>
 	<li><p><A target='_blank' href='https://github.com/google/gson'>Gson</A>
 	<li><p><A target='_blank' href='https://sourceforge.net/projects/argo/'>Argo</A>
 	<li><p><A target='_blank' href='https://bitbucket.org/jmarsden/jsonij/wiki/Home'>Jsonij</A>
-	<li><p><A target='_blank' href='http://bolerio.github.io/mjson/'>Mjson</A>
+	<li><p><A target='_blank' href='https://bolerio.github.io/mjson/'>Mjson</A>
 	<li><p><A target='_blank' href='https://sourceforge.net/projects/fastjson/'>Fastjson</A>
 	<li><p><A target='_blank' href='https://github.com/billdavidson/JSONUtil'>JSONUtil</a>
 	<li><p><A target='_blank' href='http://code.grobmeier.de/jjson/'>JJSON</a>
 	<li><p><A target='_blank' href='http://cookjson.yuanheng.org/'>Cookjson</a>
-	<li><p><A target='_blank' href='http://owlike.github.io/genson/'>Genson</a>
+	<li><p><A target='_blank' href='https://owlike.github.io/genson/'>Genson</a>
 	<li><p><A target='_blank' href='https://github.com/netplex/json-smart-v2'>Json-Smart V.2</a>
 	<li><p><A target='_blank' href='http://johnzon.apache.org/'>Apache Johnzon</a>
 	<li><p><A target='_blank' href='https://github.com/ralfstx/minimal-json'>Minimal-json</a>
