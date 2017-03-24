@@ -58,7 +58,8 @@ but:
 	<li><p><A target='_blank' href='https://github.com/netplex/json-smart-v2'>Json-Smart V.2</a>
 	<li><p><A target='_blank' href='http://johnzon.apache.org/'>Apache Johnzon</a>
 	<li><p><A target='_blank' href='https://github.com/ralfstx/minimal-json'>Minimal-json</a>
-	
+        <li><p><A target='_blank' href='https://github.com/boonproject/boon'>Boon</a>
+		
 	
 </ul>
 
