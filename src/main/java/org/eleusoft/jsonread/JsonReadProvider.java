@@ -27,7 +27,18 @@ public abstract class JsonReadProvider
 	}
 
 	/**
-	 * Creates a {@link JsonObject} from a character stream
+	 * Retrieves a {@link JsonRead} to be used by a single thread for multiple
+	 * parsing.
+	 * 
+	 * @return a {@link JsonRead}, never <code>null</code>.
+	 */
+	public abstract JsonRead getJsonRead();
+
+	/**
+	 * Convenience helper, creates a {@link JsonObject} from a character stream,
+	 * implementation is thread safe.
+	 * <p>
+	 * Equivalent to call <Code>getJsonRead().readObject(json)</code>.
 	 * 
 	 * @param json
 	 *            required reader
@@ -38,5 +49,4 @@ public abstract class JsonReadProvider
 	 *             if parsing fails for some other reason like an IO exception.
 	 */
 	public abstract JsonObject readObject(Reader json) throws JsonParsingException;
-
 }

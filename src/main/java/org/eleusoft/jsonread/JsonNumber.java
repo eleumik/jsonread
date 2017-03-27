@@ -55,11 +55,19 @@ public abstract class JsonNumber extends JsonValue
 	 * do its best to check the rules and when this is not possible, use
 	 * the mathematical value instead than the lexical.
 	 * 
-	 * <p>See also <a href='https://github.com/json-schema/json-schema/issues/27'>https://github.com/json-schema/json-schema/issues/27</a>,
-	 * and <em>integer lexical</em> <a href='https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015'>https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015</a>
-	 * 
-	 * <p>About <code>-0.0</code>: <a href='https://www.ietf.org/mail-archive/web/json/current/msg03668.html'>[Json] on serialization of signed zero</a> on ietf.org
-	 * 
+	 * <p>See also:
+	 * <p><ul>
+	 * <li><a href='https://github.com/json-schema/json-schema/issues/27'>https://github.com/json-schema/json-schema/issues/27</a>,
+	 * <li><em>integer lexical</em> <a href='https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015'>https://github.com/json-schema/json-schema/issues/27#issuecomment-9146015</a>
+	 * <li>About <code>-0.0</code>: <a href='https://www.ietf.org/mail-archive/web/json/current/msg03668.html'>[Json] on serialization of signed zero</a> on ietf.org
+	 * <li><a href='https://www.ietf.org/mail-archive/web/json/current/msg01523.html'>Re: [Json] Interop problem report with number nasties</a>
+	 * <li><A href='http://stackoverflow.com/questions/19577061/how-do-i-stringify-a-json-object-with-a-negative-zero-in-javascript'>http://stackoverflow.com/questions/19577061/how-do-i-stringify-a-json-object-with-a-negative-zero-in-javascript</a>
+	 * <li><A href='http://stackoverflow.com/questions/7223359/are-0-and-0-the-same'>http://stackoverflow.com/questions/7223359/are-0-and-0-the-same</a>
+	 * <li><a href='http://stackoverflow.com/questions/7223717/differentiating-0-and-0'>http://stackoverflow.com/questions/7223717/differentiating-0-and-0</a>
+	 * <li><a href='https://www.ietf.org/mail-archive/web/json/current/msg03925.html'>Minus Zero</a>
+	 * <li><A href='https://github.com/rust-lang/rfcs/issues/1075'>Consider outputting a `.0` suffix for FP values without a fractional part</a>
+	 * <li><a href='https://github.com/rust-lang/rfcs/issues/1074#issuecomment-97090433'>-0.0 should format with a minus sign by default</a>
+	 * </ul>
 	 * @return true if this {@link JsonNumber} is integral
 	 */
 	public abstract boolean isIntegral();
@@ -81,6 +89,9 @@ public abstract class JsonNumber extends JsonValue
 	 * <p>
 	 * The concrete implementation of {@link Number} is implementation
 	 * dependent.
+	 * <p>
+	 * Implementations may return a non standard {@link Number} however
+	 * they should specify this aspect in the documentation.
 	 * 
 	 * @return a {@link Number}, never <code>null</code>.
 	 */

@@ -4,6 +4,7 @@ import java.io.Reader;
 
 import org.eleusoft.jsonread.JsonObject;
 import org.eleusoft.jsonread.JsonParsingException;
+import org.eleusoft.jsonread.JsonRead;
 import org.eleusoft.jsonread.JsonReadProvider;
 
 /**
@@ -32,6 +33,10 @@ public class JsonReadProviderLoader extends JsonReadProvider
 		return instance;
 	}
 
+	public JsonRead getJsonRead()
+	{
+		return impl.getJsonRead();
+	}
 	/*
 	 * (non-Javadoc)
 	 * @see com.eleusoft.data.deserialize.jsonread.api.JsonProvider#readObject(java.io.Reader)
